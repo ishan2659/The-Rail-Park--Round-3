@@ -1,10 +1,10 @@
 @font-face {
   font-family: armin;
-  src: url(https://github.com/ishan2659/The-Rail-Park--Round-3/blob/main/ArminGrotesk-Regular.ttf);
+  src: url(./ArminGrotesk-Regular/ArminGrotesk-Regular.ttf);
 }
 @font-face {
   font-family: mongoose;
-  src: url(/Fontspring-DEMO-mongoose-bold.otf);
+  src: url(./Fontspring-DEMO-mongoose-bold.otf);
 }
 video {
   border-radius: 10px;
