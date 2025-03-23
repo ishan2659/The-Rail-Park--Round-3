@@ -1,10 +1,10 @@
 @font-face {
   font-family: armin;
-  src: url(./ArminGrotesk-Regular/ArminGrotesk-Regular.ttf);
+  src: url(./ArminGrotesk-Regular.woff2);
 }
 @font-face {
   font-family: mongoose;
-  src: url(./Fontspring-DEMO-mongoose-bold.otf);
+  src: url(./Fontspring-DEMO-mongoose-bold.woff2);
 }
 video {
   border-radius: 10px;
