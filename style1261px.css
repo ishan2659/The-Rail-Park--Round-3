@@ -1,0 +1,1156 @@
+@media only screen and (max-width: 1260px) {
+    @font-face {
+      font-family: armin;
+      src: url(ArminGrotesk-Regular/ArminGrotesk-Regular.ttf);
+    }
+    video {
+      border-radius: 10px;
+    }
+    .hover-video {
+      /* Smooth fade effect */
+      opacity: 0; /* Initially hidden */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hover-video.show {
+      transition: opacity 0.7s ease-in-out;
+      opacity: 1; /* Fully visible on hover */
+    }
+    body {
+      position: relative;
+      box-sizing: border-box;
+      font-family: armin;
+      margin: 0px;
+      caret-color: transparent;
+    }
+    body::selection {
+      background-color: rgb(4, 199, 92);
+    }
+    .hamburgeron {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgb(19,19,19); 
+      
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .hamburgeron.show{
+      opacity: 1;
+      visibility: visible;
+    
+    }
+    .hamburgeroff{
+      display: block;
+      opacity: 1;
+    }
+    .hamburgeroff.show{
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 123px;
+      transition: top 0.3s ease-in-out;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .header-container {
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .header-wrapper {
+      width: 81.6%;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 28px;
+      padding-bottom: 40px;
+      display: flex;
+    }
+    .hamburger-btn {
+      width: 28.56%;
+      padding-top: 15px;
+      background-color: transparent;
+      border-left: 0px;
+      border-bottom: 0px;
+    
+      border-top: 0px;
+      border-right: 0px;
+      cursor: pointer;
+    }
+    .hamburger-btn-container {
+      width: 28.56%;
+      padding-top: 15px;
+    }
+    
+    .navbar {
+      width: 42.88%;
+      display: flex;
+      justify-content: space-between;
+    }
+    navbar img:hover {
+      content: url(downloadhover.svg);
+    }
+    .visit-btn {
+      text-decoration: none;
+      color: black;
+      font-size: 1.2rem;
+    }
+    .vision-btn {
+      text-decoration: none;
+      color: black;
+      font-size: 1.2rem;
+    }
+    .navbar a {
+      padding-top: 15px;
+    }
+    .navbar a:hover {
+      color: rgb(4, 199, 92);
+      transition: 0.2s;
+    }
+    
+    .donate-btn {
+      width: 28.56%;
+      display: flex;
+      justify-content: end;
+      padding-top: 7px;
+    }
+    .donate-btn a {
+      text-decoration: none;
+      color: black;
+      font-size: 1rem;
+    }
+    .donate-btn button {
+      height: 40.6px;
+      width: 140px;
+      border: 1px 1px 1px 1px;
+      color: black;
+    
+      background-color: transparent;
+      border-radius: 45px;
+    }
+    .donate-btn button:hover {
+      background-color: rgb(4, 199, 92);
+      border: 0px;
+      color: white;
+      transition: 0.3s;
+    }
+    .donate-btn a:hover {
+      color: white;
+    }
+    .donate-btn-container a {
+      height: 100%;
+    }
+    .donate-btn-container a:hover {
+      color: white;
+    }
+    .lang-selector {
+      width: 50px;
+      height: 15px;
+      padding-left: 35.7%;
+      padding-top: 15px;
+    }
+    .lang-selector a {
+      font-size: 0.7rem;
+    }
+    .donate-btn-container {
+      display: flex;
+      flex-direction: column;
+      height: 80px;
+    }
+    main {
+      position: relative;
+      top: 130px;
+      box-sizing: border-box;
+    
+      height: 4500px;
+      width: 100%;
+    }
+    .main-title-container {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      height: 244px;
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+      display: flex;
+      justify-content: start;
+      transform: translateY(calc(var(--scrollvalue) * 0.15px));
+      transition: transform 0.1s linear;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .main-title-container.show {
+      transform: translateY(0px);
+      opacity: 1;
+      transition: 0.5s ease-in-out;
+    }
+    .title-container {
+      height: 100%;
+      width: 75%;
+    }
+    .title-wrapper {
+      margin-left: 16.67%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      font-size: 8rem;
+      font-weight: 700;
+      line-height: 0.89;
+      flex-shrink: 2;
+    }
+    .extra-carousel-container {
+      position: absolute;
+      height: 120px;
+    }
+    .carousel-container {
+      
+      position: absolute;
+      left: 0px;
+      top: 120px;
+      height: 448px;
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+      display: flex;
+      transform: translateY(calc(var(--scrollvalue) * -0.25px));
+      flex-direction: row;
+    }
+    .prev-btn {
+      width: 54px;
+      height: 13px;
+      background-color: transparent;
+      border: 0px;
+      background-image: url(carousel_left.svg);
+      transition: 0.3s ease-in-out;
+    }
+    .prev-btn:hover {
+      transform: translateX(5px);
+    }
+    
+    .prev-btn-container {
+      width: 4.87%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .next-btn {
+      width: 54px;
+      height: 13px;
+      background-color: transparent;
+      border: 0px;
+      background-image: url(carousel-right.svg);
+      transition: 0.3s ease-in-out;
+    }
+    .next-btn:hover {
+      transform: translateX(-5px);
+    }
+    .next-btn-container {
+      width: 4.87%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .carousel-text {
+      width: 41.8%;
+      height: 55.36%;
+      padding-top: 200px;
+      padding-left: 10px;
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    .carousel-text.show{
+      transform: translateY(0px);
+      opacity: 1;
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+      
+    
+    }
+    .carousel-text2{
+      position: absolute;
+      left: 11.09%;
+      width: 23.23%;
+      height: 448px;
+      padding-top: 200px;
+      transform: translateY(30px);
+      opacity: 0;
+    
+    
+    }
+    .carousel-text2.show{
+      transform: translateY(0px);
+      opacity: 1;
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+      
+    
+    }
+    .text1-carousel {
+      font-size: 2.8rem;
+      font-weight: 400;
+    }
+    .text2-carousel {
+      padding-top: 10px;
+    }
+    .text2-carousel a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: rgb(4, 199, 92);
+      transition: 0.3s ease-in-out;
+    }
+    .text2-carousel a:hover {
+      color: black;
+    }
+    .text1-carousel2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    .text2-carousel2 {
+      padding-top: 10px;
+    }
+    .text2-carousel2 a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: rgb(4, 199, 92);
+      transition: 0.3s ease-in-out;
+    }
+    .text2-carousel2 a:hover {
+      color: black;
+    }
+    
+    .img-container1 {
+      width: 47.67%;
+      aspect-ratio: 600/418;
+      
+      background-size: cover;
+      background-image: url(https://images.prismic.io/railpark/b75ee5d3-664e-44d8-975a-b739140bf61d_landing-page-header-phase-1.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&w=800&h=450);
+      margin-left: 30px;
+      
+    }
+    
+    .img-container2{
+      position: absolute;
+      background-size: cover;
+      aspect-ratio: 600/418;
+      aspect-ratio: 600/448;
+      left: 43.57%;
+      
+      width: 44.14%;
+      height: 100%;
+      margin-left: 30px;
+      
+      
+      background-image: url(https://images.prismic.io/railpark/0f55920f-6808-48d2-a89a-b99a5ca72ca0_the-cut.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&w=800&h=548);
+    
+    }
+    
+    .show {
+      opacity: 1 !important;
+      transform: translate(0, 0) rotate(0deg);
+      transform-origin: center;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-in-out;
+    }
+    
+    
+    .exit {
+      opacity: 0;
+      transform-origin: bottom right; 
+      transform: translate(-80px, 80px) rotate(-12deg);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-in-out;
+      
+    }
+    
+    
+    .enter {
+      opacity: 1;
+      transform-origin: top left; 
+      transform: translate(-80px, 80px) rotate(12deg);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-in-out;
+      
+    }
+    
+    
+    
+    .img-container {
+      
+      opacity: 0;
+      background-size: cover;
+      background-position: center;
+      
+      transition: opacity 0.6s ease-out, transform 0.6s ease-in-out;
+    
+    }
+    
+    
+    
+    
+    
+    .empty-carousel {
+      width: 0.91%;
+      flex-shrink: 5;
+    }
+    .visiting-header-container {
+      position: absolute;
+      top: 700px;
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+      height: 160px;
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .vis-text-c1 {
+      position: absolute;
+      right: 18.32%;
+      height: 50%;
+      font-size: 4.5rem;
+      font-weight: 700;
+    }
+    .vis-text-c2 {
+      position: absolute;
+      top: 50%;
+      right: 12.46%;
+      height: 50%;
+      font-size: 4.5rem;
+      font-weight: 700;
+    }
+    .visiting-header-container.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .noble-container {
+      position: absolute;
+      top: 820px;
+      height: 378px;
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+      display: flex;
+    }
+    .img-noble-container {
+      margin-left: 120px;
+      height: 68.28%;
+      width: 34.7%;
+      background-size: cover;
+      background-image: url(https://images.prismic.io/railpark/28507bd7-e937-4074-87b0-95751194f4c1_noble-entrance.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max);
+      border-radius: 2px;
+    }
+    
+    .text-noble-container {
+      padding-left: 24px;
+      height: 68.28%;
+      width: 40%;
+    }
+    .text-noble-container button {
+      height: 46.45px;
+      background-color: transparent;
+      border: 0px;
+      width: 48px;
+      transition: 0.3s ease-in-out;
+    }
+    .text-noble-container button:hover {
+      transform: translateX(-7px);
+    }
+    .noble-header {
+      font-size: 2.8rem;
+      font-weight: 200;
+      height: 95px;
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 48px;
+      display: flex;
+    }
+    .noble-header-text {
+      font-size: 2.8rem;
+      font-weight: 200;
+      height: 95px;
+      width: 201px;
+    
+      margin-bottom: 48px;
+    }
+    .noble-details {
+      text-decoration: none;
+      font-style: normal;
+    }
+    .noble-details span {
+      padding-left: 50px;
+    }
+    .noble-details i {
+      padding-left: 10px;
+    }
+    .noble-img-wheelchair-container {
+      margin-top: 25px;
+      margin-bottom: 48px;
+      height: 68px;
+      width: 68px;
+    }
+    
+    .callowhill-container {
+      position: absolute;
+      top: 1198px;
+      height: 378px;
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+      display: flex;
+    }
+    .img-callowhill-container {
+      margin-right: 120px;
+      height: 68.28%;
+      width: 34.7%;
+      border-radius: 2px;
+      order: 3;
+      background-size: cover;
+      background-image: url(https://images.prismic.io/railpark/ca831225-3552-40ec-9f6f-bb576af3eb65_callowhill-entrance.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max);
+    }
+    
+    .text-callowhill-container {
+      padding-right: 24px;
+      padding-left: 202px;
+      height: 68.28%;
+      width: 40%;
+      order: 2;
+    }
+    .text-callowhill-container button {
+      height: 46.45px;
+      background-color: transparent;
+      border: 0px;
+      width: 48px;
+      transition: 0.3s ease-in-out;
+    }
+    .text-callowhill-container button:hover {
+      transform: translateX(7px);
+    }
+    .callowhill-header {
+      font-size: 2.8rem;
+      font-weight: 200;
+      height: 95px;
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 48px;
+      display: flex;
+    }
+    .callowhill-header-text {
+      font-size: 2.8rem;
+      font-weight: 200;
+      height: 95px;
+      width: 250px;
+    
+      margin-bottom: 48px;
+    }
+    .callowhill-details {
+      text-decoration: none;
+      font-style: normal;
+    }
+    .callowhill-details span {
+      padding-left: 50px;
+    }
+    .callowhill-details i {
+      padding-left: 10px;
+    }
+    .callowhill-img-staircase-container {
+      margin-top: 25px;
+      margin-bottom: 48px;
+      height: 68px;
+      width: 68px;
+    }
+    .parallax-text-container {
+      position: absolute;
+      top: 1576px;
+      height: 665px;
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+    }
+    .parallax-wrapper1 {
+      width: 100%;
+      height: 320px;
+      margin-bottom: 30px;
+      font-size: 4.4rem;
+      font-weight: 700;
+    }
+    .parallax-wrapper1 div {
+      transform: translateY(50px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      opacity: 0;
+    }
+    .parallax-wrapper2 {
+      margin-top: 100px;
+      font-size: 1.6rem;
+      font-weight: 200;
+    }
+    .parallax-wrapper2 {
+      transform: translateY(50px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      opacity: 0;
+    }
+    .parallax-wrapper1 div.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .parallax-wrapper2.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .parallax-wrapper1 span {
+      color: rgb(4, 199, 92);
+      cursor: pointer;
+    }
+    .main2 {
+      position: absolute;
+      top: calc(1576px + 615px);
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+      height: 1388px;
+    }
+    .main2-container1 {
+      display: flex;
+      z-index: 10;
+    }
+    .main2-video-container {
+      width: 32%;
+      height: 500px;
+      border-radius: 5px;
+     
+      background-image: url(https://images.prismic.io/railpark/e9874d84-0be0-4864-80de-dfeab4d76be7_the-viaduct.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&w=700&h=875);
+    }
+    .main2-text-container {
+      height: 300px;
+      width: 68%;
+    }
+    .main2-header1 {
+      padding-top: 100px;
+      font-size: 3rem;
+      width: 100px;
+      padding-left: 20px;
+    }
+    .main2-dir1 {
+      font-size: 0.8rem;
+      padding-left: 30px;
+    }
+    
+    .main2-container2 {
+      display: flex;
+      width: 41.3%;
+      height: 416px;
+      flex-direction: column;
+      position: absolute;
+      top: 250px;
+      padding-left: 52%;
+      z-index: 0;
+    }
+    .main2-video-container2 {
+      width: 100%;
+      height: 286px;
+      border-radius: 5px;
+      background-size: cover;
+      
+      background-image: url(https://images.prismic.io/railpark/d7009ba0-a9fb-4192-96c3-da520075023d_the-cut.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&w=1946&h=1557);
+    }
+    .main2-text-container {
+      height: 300px;
+      width: 68%;
+    }
+    .main2-header2 {
+      padding-top: 20px;
+      font-size: 3rem;
+      width: 300px;
+      padding-left: 20px;
+    }
+    .main2-dir2 {
+      font-size: 0.8rem;
+      padding-left: 30px;
+      padding-top: 20px;
+    }
+    .main2-container3 {
+      position: absolute;
+      top: 562px;
+      width: 38.41%;
+      aspect-ratio: 524/560;
+      padding-left: 10%;
+      font-size: 1.875rem;
+      letter-spacing: 0.2px;
+    }
+    .main2-container3 div:hover {
+      color: rgb(4, 199, 92);
+      transition: 0.2s ease-in-out;
+      transform: translateX(5px);
+    }
+    .calendar-container {
+      position: absolute;
+      top: calc(1576px + 615px + 1200px);
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+      height: 523px;
+    }
+    
+    .list-container {
+      height: 425.53px;
+      position: relative;
+      display: flex;
+    }
+    #calendar-title {
+      transform: rotate(-90deg);
+      transform-origin: top left;
+      position: absolute;
+      bottom: -113.7px;
+      left: 0px;
+      height: 26.72%;
+      width: 31.18%;
+      text-align: end;
+      font-size: 3rem;
+    }
+    #calendar0 {
+      width: 8.5%;
+    }
+    #calendar1 {
+      height: 100%;
+      width: 15.17%;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin-left: 8.5%;
+    }
+    #calendar2,
+    #calendar3,
+    #calendar4,
+    #calendar5 {
+      padding-left: 12px;
+      padding-right: 12px;
+      width: 15.17%;
+      height: 100%;
+    }
+    .calendar-list-items img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      transition: 0.5s ease-in-out;
+    }
+    .calendar-date {
+      font-size: 0.813rem;
+      padding-top: 5px;
+    }
+    .calendar-subheading {
+      font-size: 2rem;
+      padding-top: 10px;
+    }
+    .calendar-details {
+      font-size: 0.85rem;
+      padding-top: 10px;
+      transition: 0.5s ease-in-out;
+    }
+    .calendar-details.show {
+      color: rgb(4, 199, 92);
+      transition: 0.2s ease-in-out;
+      transform: translateX(5px);
+    }
+    .calendar-list-items img.show {
+      transform: translateY(-20px);
+      transition: 0.5s ease-in-out;
+    }
+    .gmail-main {
+      position: absolute;
+      top: 3879px;
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+      height: 297.6px;
+      background-color: rgb(12, 238, 114);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .gmail-main-header {
+      width: 49.85%;
+      height: 40px;
+      text-align: center;
+      font-size: 1.25rem;
+    }
+    .input-gmail {
+      width: 100%;
+      height: 40px;
+      border-color: gray;
+      border-width: 1px;
+      background-color: transparent;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color:  transparent;
+      text-decoration: none;
+      caret-color: gray;
+      font-size: 1.4rem;
+      color: gray;
+    }
+    .gmail-main form{
+        position: relative;
+        width: 49.85%;
+      height: 40px;
+      border-color: gray;
+      border-width: 1px;
+      background-color: transparent;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color:  transparent;
+    }
+    .gmail-submit-btn{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        width: 40px;
+        background-color: transparent;
+        border-bottom: 0px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        cursor: pointer;
+    }
+    .gmail-main input::placeholder{
+        color: gray;
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
+    .errorform-container{
+        width: 49.85%;
+      height: 40px;
+      text-align: center;
+      font-size: 1.25rem;
+      color: red;
+    }
+    footer{
+      position: absolute;
+      top: 4276.6px;
+      padding-left: 3.28%;
+      padding-right: 3.28%;
+      width: 93.22%;
+      height: 569px;
+      background-color: rgb(19,19,19);
+      color: white;
+    
+    
+    }
+    .footer-container{
+      padding-top: 72px;
+      padding-bottom: 40px;
+      height: 80.28%;
+      width: 100%;
+      display: flex;
+    
+    
+    
+    }
+    .footer-column1{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 32.26%;
+    
+    }
+    .footer-column2{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 34.01%;
+    }
+    
+    .footer-column3{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 34.01%;
+    }
+    .footer-video-container{
+      width: 100%;
+      height: 65.23%;
+      padding-left: 26px;
+      padding-top: 24px;
+      position: relative;
+    
+    
+    }
+    .svg-footer-container{
+      height: 240px;
+      width: 240px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-image: url(donate.svg);
+      background-size: cover;
+      animation: rotate 15s infinite linear ;
+    
+    }
+    
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .column1-text{
+      margin-top: 49px;
+      font-size: 0.9rem;
+      height: 18.82%;
+      color: white;
+    
+    }
+    .column2-text1{
+      height: 129px;
+      width: 100%;
+    
+    }
+    .column2-text1 h2{
+      font-size: 1rem;
+      margin-block-start: 0px;
+      margin-block-end: 20px;
+      font-weight: 400;
+    }
+    .column2-text1 p{
+      font-size: 1.775rem;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+    }
+    
+    .column2-text2{
+      height: 129px;
+      width: 100%;
+    
+    }
+    .column2-text2 h2{
+      font-size: 1rem;
+      margin-block-start: 10px;
+      margin-block-end: 20px;
+      font-weight: 400;
+    }
+    .column2-text2 p{
+      font-size: 1.775rem;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+    }
+    
+    .column2-text3{
+      height: 189px;
+      width: 100%;
+    
+    }
+    .column2-text3 h2{
+      font-size: 1rem;
+      margin-block-start: 80px;
+      margin-block-end: 20px;
+      font-weight: 400;
+    }
+    .column2-text3 p{
+      font-size: 1.775rem;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+    }
+    .column2-text3 a{
+      font-size: 1.775rem;
+      color: white;
+      text-decoration: none;
+    }
+    .column2-text3 a i{
+      padding-left: 5px;
+      padding-right: 5px;
+    
+    }
+    
+    
+    }
+
+
+    @media only screen and (max-width:966px ){
+        .visiting-header-container {
+            position: absolute;
+            top: 600px;
+            padding-left: 3.28%;
+            padding-right: 3.28%;
+            width: 93.22%;
+            height: 160px;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+          }
+          .vis-text-c1 {
+            position: absolute;
+            right: 35.32%;
+            height: 50%;
+            font-size: 3.5rem;
+            font-weight: 700;
+          }
+          .vis-text-c2 {
+            position: absolute;
+            top: 50%;
+            right: 38.46%;
+            height: 50%;
+            font-size: 3.5rem;
+            font-weight: 700;
+          }
+          .visiting-header-container.show {
+            opacity: 1;
+            transform: translateX(0);
+          }
+          .noble-container {
+            position: absolute;
+            top: 780px;
+            height: 378px;
+            padding-left: 3.28%;
+            padding-right: 3.28%;
+            width: 93.22%;
+            display: flex;
+            flex-direction: column;
+          }
+          .img-noble-container {
+            margin-left: 120px;
+            height: 68.28%;
+            width: 100%;
+            background-size: cover;
+            background-image: url(https://images.prismic.io/railpark/28507bd7-e937-4074-87b0-95751194f4c1_noble-entrance.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max);
+            border-radius: 2px;
+          }
+          
+          .text-noble-container {
+            padding-left: 24px;
+            height: 68.28%;
+            width: 40%;
+          }
+          .text-noble-container button {
+            height: 46.45px;
+            background-color: transparent;
+            border: 0px;
+            width: 48px;
+            transition: 0.3s ease-in-out;
+          }
+          .text-noble-container button:hover {
+            transform: translateX(-7px);
+          }
+          .noble-header {
+            font-size: 2.8rem;
+            font-weight: 200;
+            height: 95px;
+            width: 100%;
+            margin-top: 25px;
+            margin-bottom: 48px;
+            display: flex;
+          }
+          .noble-header-text {
+            font-size: 2.8rem;
+            font-weight: 200;
+            height: 95px;
+            width: 201px;
+          
+            margin-bottom: 48px;
+          }
+          .noble-details {
+            text-decoration: none;
+            font-style: normal;
+          }
+          .noble-details span {
+            padding-left: 50px;
+          }
+          .noble-details i {
+            padding-left: 10px;
+          }
+          .noble-img-wheelchair-container {
+            margin-top: 25px;
+            margin-bottom: 48px;
+            height: 68px;
+            width: 68px;
+          }
+          
+          .callowhill-container {
+            position: absolute;
+            top: 1198px;
+            height: 378px;
+            padding-left: 3.28%;
+            padding-right: 3.28%;
+            width: 93.22%;
+            display: flex;
+          }
+          .img-callowhill-container {
+            margin-right: 120px;
+            height: 68.28%;
+            width: 34.7%;
+            border-radius: 2px;
+            order: 3;
+            background-size: cover;
+            background-image: url(https://images.prismic.io/railpark/ca831225-3552-40ec-9f6f-bb576af3eb65_callowhill-entrance.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max);
+          }
+          
+          .text-callowhill-container {
+            padding-right: 24px;
+            padding-left: 202px;
+            height: 68.28%;
+            width: 40%;
+            order: 2;
+          }
+          .text-callowhill-container button {
+            height: 46.45px;
+            background-color: transparent;
+            border: 0px;
+            width: 48px;
+            transition: 0.3s ease-in-out;
+          }
+          .text-callowhill-container button:hover {
+            transform: translateX(7px);
+          }
+          .callowhill-header {
+            font-size: 2.8rem;
+            font-weight: 200;
+            height: 95px;
+            width: 100%;
+            margin-top: 25px;
+            margin-bottom: 48px;
+            display: flex;
+          }
+          .callowhill-header-text {
+            font-size: 2.8rem;
+            font-weight: 200;
+            height: 95px;
+            width: 250px;
+          
+            margin-bottom: 48px;
+          }
+          .callowhill-details {
+            text-decoration: none;
+            font-style: normal;
+          }
+          .callowhill-details span {
+            padding-left: 50px;
+          }
+          .callowhill-details i {
+            padding-left: 10px;
+          }
+          .callowhill-img-staircase-container {
+            margin-top: 25px;
+            margin-bottom: 48px;
+            height: 68px;
+            width: 68px;
+          }
+    }
+    
+    
+    
